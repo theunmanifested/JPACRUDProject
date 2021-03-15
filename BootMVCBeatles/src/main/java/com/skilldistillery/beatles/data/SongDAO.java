@@ -1,9 +1,19 @@
 package com.skilldistillery.beatles.data;
 
+import java.util.List;
+
 import com.skilldistillery.beatles.entities.Song;
 
 public interface SongDAO {
 
-	public Song findById(int id);
+	List<Song> findAll();
+	
+	Song findById(int id);
+//	
+//	Song updateSong(int id, Song song);
+//	
+//	boolean destroySong(int id);
+//	
+//	Song addSong(Song song);
 	
 }

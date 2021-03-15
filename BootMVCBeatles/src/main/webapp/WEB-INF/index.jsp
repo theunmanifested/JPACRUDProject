@@ -12,12 +12,27 @@
 
 <h1>Beatles Fab Albums</h1>
 
-<h2>What's the name of this track number, then? -- C(R)UD</h2>
+<h2>Abbey Road</h2>
+
+<a href=""></a>  <h3>What's All This, then?</h3>
 	<form action="getSong.do" method="GET">
 		Track Number: <input type="text" name="fid" /> <input type="submit"
 			value="Show Song" />
 </form>
 
-${test.trackName}
+	<table class="table table-striped table-hover">
+		<thead class="table-dark">
+		  <th>ID</th>
+		  <th>Track Name</th>
+		</thead>
+		<tbody>
+			<c:forEach var="s" items="${songList}">
+				<tr>
+					<td>${s.id}</td>
+					<td><a href="getSong.do?fid=${s.id}">${s.trackName}</a></td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
 </body>
 </html>
