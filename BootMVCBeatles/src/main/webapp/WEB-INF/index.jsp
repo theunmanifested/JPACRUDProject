@@ -14,25 +14,21 @@
 
 <h2>Abbey Road</h2>
 
-<a href=""></a>  <h3>What's All This, then?</h3>
+<h3>What's All This, then?</h3>
+<p>To our (beatles fans) delight, we have gotten plenty of remixes, re-releases, lost-tapes, and many other forms of some of the fab four's albums. But there is one inconveniece.... We've got to keep up with the new additions to the Abbey Road album. So, here you go!</p>
+<br>
+<h4>Rather See The All At Once?</h4>
+<form action="getAllSongs.do" method="GET">
+	<input type="submit" value="ShowAllSongs"/>
+</form>
+<br>
+<a href="showSong"></a><h4>Want to Find Your Song by Track Number?</h4>	
+	
 	<form action="getSong.do" method="GET">
 		Track Number: <input type="text" name="fid" /> <input type="submit"
 			value="Show Song" />
 </form>
 
-	<table class="table table-striped table-hover">
-		<thead class="table-dark">
-		  <th>ID</th>
-		  <th>Track Name</th>
-		</thead>
-		<tbody>
-			<c:forEach var="s" items="${songList}">
-				<tr>
-					<td>${s.id}</td>
-					<td><a href="getSong.do?fid=${s.id}">${s.trackName}</a></td>
-				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
+	
 </body>
 </html>
