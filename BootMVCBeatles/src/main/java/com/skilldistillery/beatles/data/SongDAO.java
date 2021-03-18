@@ -14,6 +14,6 @@ public interface SongDAO {
 //	
 //	boolean destroySong(int id);
 //	
-//	Song addSong(Song song);
+	Song addSong(Song song);
 	
 }

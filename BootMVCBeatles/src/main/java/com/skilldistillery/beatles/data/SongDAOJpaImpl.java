@@ -29,32 +29,12 @@ public class SongDAOJpaImpl implements SongDAO {
 		return em.createQuery(jpql, Song.class).getResultList();
 	}
 
-	
-	
-//	@Override
-//	public Song updateSong(int id, Song song) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-//
-//	@Override
-//	public boolean destroySong(int id) {
-////		EntityManager em = emf.createEntityManager();
-////		em.getTransaction().begin();
-////		Song managed = new Song();
-////		managed = em.find(Song.class, id);
-////		managed.setFirstName(actor.getFirstName());
-////		managed.setLastName(actor.getLastName());
-////		em.getTransaction().commit();
-////		em.close();
-//		return false;
-//	}
-//
-//	@Override
-//	public Song addSong(Song song) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
+	@Override
+	public Song addSong(Song song) {
+		em.persist(song);
+		em.flush();
+		return song;
+	}
 	
 	
 

@@ -36,5 +36,21 @@ public class SongController {
 		model.addAttribute("songList", songs);
 		return "song/showAllSongs";
 	}
+	
+	
+	@RequestMapping(path = "addASongForm.do")
+	public String addASongForm(Song song, Model model) {
+		model.addAttribute("song", song);
+		return "song/addASongForm";
+	}
+	
+	
+	@RequestMapping(path = "addASong.do")
+	public String addASong(Song song, Model model) {
+		song = dao.addSong(song);
+		model.addAttribute("song", song);
+		return "song/addedSong";
+	}
+	
 
 }
