@@ -49,6 +49,15 @@ public class SongDAOJpaImpl implements SongDAO {
 		uSong.setAlbumVersion(song.getAlbumVersion());
 		return uSong;
 	}
+
+	@Override
+	public boolean destroySong(int id) {
+		boolean wasRemoved = false;
+		Song dSong = em.find(Song.class, id);
+		em.remove(dSong);
+		wasRemoved = !em.contains(dSong);
+		return wasRemoved;
+	}
 	
 	
 

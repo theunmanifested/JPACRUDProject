@@ -42,7 +42,11 @@
 		<button type="submit" name="id" value="${song.id}">Do you
 			want to update this song?</button>
 	</form>
-
+	<form action="destroySong.do" method="POST">
+		<button type="submit" name="id" value="${song.id}">Let's
+			Delete</button>
+	</form>
+	<br>
 
 	<form action="home.do">
 		<input type="submit" value="Go Back Home" />

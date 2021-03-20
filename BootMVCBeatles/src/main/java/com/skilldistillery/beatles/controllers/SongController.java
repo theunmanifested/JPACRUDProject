@@ -68,4 +68,13 @@ public class SongController {
 		return "song/updatedSong";
 	}
 
+	// Destroy
+	
+	@RequestMapping(path = "destroySong.do")
+	public String destroySong(int id, Model model) {
+		boolean wasDestroyed = dao.destroySong(id);
+		model.addAttribute("wasDestroyed", wasDestroyed);
+		return "song/destroyedSong";
+	}
+	
 }

@@ -55,11 +55,12 @@
 
 	</table>
 
-	<%-- <h4>Already hate it? Want to delete it?	</h4>
+	<h4>Already hate it? Want to delete it?	</h4>
 	
-	<form action="deleteSong.do" method="POST">
+	<form action="destroySong.do" method="POST">
 			<button type="submit" name="id" value="${song.id}">Let's Delete</button>
-		</form> --%>
+		</form> 
+		<br>
 	<form action="home.do">
 		<input type="submit" value="Go Back Home" />
 	</form>
