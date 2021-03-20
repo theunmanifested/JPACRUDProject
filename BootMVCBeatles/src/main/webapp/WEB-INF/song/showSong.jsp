@@ -38,6 +38,14 @@
 		</tbody>
 	</table>
 
+	<form action="updateASongForm.do" method="GET">
+		<button type="submit" name="id" value="${song.id}">Do you
+			want to update this song?</button>
+	</form>
 
+
+	<form action="home.do">
+		<input type="submit" value="Go Back Home" />
+	</form>
 </body>
 </html>

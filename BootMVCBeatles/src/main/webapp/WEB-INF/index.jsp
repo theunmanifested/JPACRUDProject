@@ -19,13 +19,13 @@
 <br>
 <h4>All Together Now?</h4>
 <form action="getAllSongs.do" method="GET">
-	<input type="submit" value="ShowAllSongs"/>
+	<input class="btn btn-primary" type="submit" value="ShowAllSongs"/>
 </form>
 <br>
 <h2>Got A New Song From A New Version of Abbey Road?</h2>
 
 <form action="addASongForm.do" method="GET">
-	<input type="submit" value="Add Your New Song!"/>
+	<input class="btn btn-primary" type="submit" value="Add Your New Song!"/>
 </form>
 
 
@@ -35,7 +35,7 @@
 <a href="showSong"></a><h4>Want to Find Your Song by Track Number?</h4>	
 	
 	<form action="getSong.do" method="GET">
-		Track Number: <input type="text" name="fid" /> <input type="submit"
+		Track Number: <input class="btn btn-primary" type="text" name="fid" /> <input type="submit"
 			value="Show Song" />
 </form>
 

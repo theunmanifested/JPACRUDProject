@@ -35,6 +35,20 @@ public class SongDAOJpaImpl implements SongDAO {
 		em.flush();
 		return song;
 	}
+
+	@Override
+	public Song updateSong(Song song) {
+		Song uSong = em.find(Song.class, song.getId());
+		uSong.setTrackName(song.getTrackName());
+		uSong.setWrittenBy(song.getWrittenBy());
+		uSong.setLength(song.getLength());
+		uSong.setAlbum(song.getAlbum());
+		uSong.setHasRingo(song.getHasRingo());
+		uSong.setDateRecorded(song.getDateRecorded());
+		uSong.setMainSinger(song.getMainSinger());
+		uSong.setAlbumVersion(song.getAlbumVersion());
+		return uSong;
+	}
 	
 	
 

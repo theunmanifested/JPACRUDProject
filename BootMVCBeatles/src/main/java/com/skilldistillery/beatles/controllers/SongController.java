@@ -17,18 +17,33 @@ public class SongController {
 	private SongDAO dao;
 
 	@RequestMapping(path = { "/", "home.do" })
-	public String index(Model model) {		
+	public String index(Model model) {
 		return "index";
 	}
 
-//	Read - Find Song by Id or Track Number
+	// Create
+
+	@RequestMapping(path = "addASong.do")
+	public String addASong(Song song, Model model) {
+		song = dao.addSong(song);
+		model.addAttribute("song", song);
+		return "song/addedSong";
+	}
+
+	@RequestMapping(path = "addASongForm.do")
+	public String addASongForm(Song song, Model model) {
+		model.addAttribute("song", song);
+		return "song/addASongForm";
+	}
+
+	// Read
+
 	@RequestMapping(path = "getSong.do")
 	public String showSong(Integer fid, Model model) {
 		Song song = dao.findById(fid);
 		model.addAttribute("song", song);
 		return "song/showSong";
 	}
-	// display all of the songs
 
 	@RequestMapping(path = { "getAllSongs.do" })
 	public String getAllSongs(Model model) {
@@ -36,21 +51,21 @@ public class SongController {
 		model.addAttribute("songList", songs);
 		return "song/showAllSongs";
 	}
-	
-	
-	@RequestMapping(path = "addASongForm.do")
-	public String addASongForm(Song song, Model model) {
-		model.addAttribute("song", song);
-		return "song/addASongForm";
+
+	// Update
+
+	@RequestMapping(path = "updateASongForm.do")
+	public String updateSongForm(int id, Model model) {
+		Song uSong = dao.findById(id);
+		model.addAttribute("song", uSong);
+		return "song/updateASong";
 	}
-	
-	
-	@RequestMapping(path = "addASong.do")
-	public String addASong(Song song, Model model) {
-		song = dao.addSong(song);
-		model.addAttribute("song", song);
-		return "song/addedSong";
+
+	@RequestMapping(path = "updatedSong.do")
+	public String updateSong(int id, Song song, Model model) {
+		Song uSong = dao.updateSong(song);
+		model.addAttribute("song", uSong);
+		return "song/updatedSong";
 	}
-	
 
 }

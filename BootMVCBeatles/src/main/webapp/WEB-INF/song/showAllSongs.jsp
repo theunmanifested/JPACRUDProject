@@ -26,5 +26,9 @@
 			</c:forEach>
 		</tbody>
 	</table>
+	
+	<form action="home.do">
+		<input type="submit" value="Go Back Home" />
+</form>
 </body>
 </html>

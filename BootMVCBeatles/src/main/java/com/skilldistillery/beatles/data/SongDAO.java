@@ -6,14 +6,15 @@ import com.skilldistillery.beatles.entities.Song;
 
 public interface SongDAO {
 
-	List<Song> findAll();
+	// Create
+	Song addSong(Song song);	
 	// Read
 	Song findById(int id);
-	
-//	Song updateSong(int id, Song song);
-//	
+	List<Song> findAll();
+	// Update
+	Song updateSong(Song song);
+    // Destroy
 //	boolean destroySong(int id);
-//	
-	Song addSong(Song song);
+    
 	
 }

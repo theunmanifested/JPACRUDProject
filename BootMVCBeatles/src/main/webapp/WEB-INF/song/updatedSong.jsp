@@ -2,6 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,15 +12,10 @@
 </head>
 <body>
 
-	<!-- New song added displayed -->
+	<!-- New Updated Song Displayed -->
 
-	<h2>Here's Your New Song Added!</h2>
+	<h2>Here's Your Updated Song!</h2>
 
-	<h4>But first, do you want to update it?</h4>
-	<form action="updateASongForm.do" method="GET">
-		<input class="btn btn-primary" type="submit"
-			value="Let's Update This Song" />
-	</form>
 	<table>
 		<tr>
 			<td>Track Name</td>
@@ -55,13 +52,9 @@
 
 	</table>
 
-	<%-- <h4>Already hate it? Want to delete it?	</h4>
-	
-	<form action="deleteSong.do" method="POST">
-			<button type="submit" name="id" value="${song.id}">Let's Delete</button>
-		</form> --%>
 	<form action="home.do">
 		<input type="submit" value="Go Back Home" />
 	</form>
+
 </body>
 </html>
