@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `song` (
 ENGINE = InnoDB;
 
 SET SQL_MODE = '';
--- DROP USER IF EXISTS beatlesfan@localhost;
+DROP USER IF EXISTS beatlesfan@localhost;
 SET SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 CREATE USER 'beatlesfan'@'localhost' IDENTIFIED BY 'beatlesfan';
 
@@ -68,3 +68,4 @@ INSERT INTO `song` (`id`, `track_name`, `written_by`, `length`, `album`, `has_ri
 INSERT INTO `song` (`id`, `track_name`, `written_by`, `length`, `album`, `has_ringo`, `date_recorded`, `main_singer`, `album_version`) VALUES (17, 'Her Majesty', 'John, Paul', '0:23', 'Abbey Road', 'no', '2 July 1969', 'Paul', NULL);
 
 COMMIT;
+
